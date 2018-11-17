@@ -41,7 +41,7 @@
 
         <!-- Plugins -->
         <maven-compiler.plugin.version>3.7.0</maven-compiler.plugin.version>
-        <maven-surefire.plugin.version>2.21.0</maven-surefire.plugin.version>
+        <maven-surefire.plugin.version>2.22.0</maven-surefire.plugin.version>
         <jacoco.plugin.version>0.8.2</jacoco.plugin.version>
 
         <!-- Constraints -->
@@ -87,13 +87,6 @@
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire.plugin.version}</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.junit.platform</groupId>
-                        <artifactId>junit-platform-surefire-provider</artifactId>
-                        <version>${junit.platform.version}</version>
-                    </dependency>
-                </dependencies>
 
                 <!--
 
@@ -103,6 +96,12 @@
 
                     https://stackoverflow.com/questions/53010200/maven-surefire-could-not-find-forkedbooter-class
                     https://issues.apache.org/jira/browse/SUREFIRE-1588
+
+                    Also note that version 2.22.0 of surefire plugin is needed, which provides native support for JUnit Platform:
+
+                        Could not find or load main class org.apache.maven.plugin.surefire.log.api.ConsoleLogger
+
+                    https://github.com/junit-team/junit5/issues/1367
                 -->
                 <configuration>
                     <forkCount>0</forkCount>
@@ -121,7 +120,8 @@
                         </goals>
                     </execution>
 
-                    <!-- The check goal by default runs in the verify phase,
+                    <!--
+                        The check goal by default runs in the verify phase,
                          we want to fail the build if mimimum code coverage checks aren't met
                     -->
                     <execution>
