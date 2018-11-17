@@ -1,0 +1,35 @@
+= Test Circle CI Manual
+Danilo Arcidiacono <danilo.arcidiacono@gmail.com>
+:revnumber: {project-version}
+ifndef::imagesdir[:imagesdir: images]
+
+This is a user manual for Test Circle CI.
+
+== Introduction
+This project introduces the `Operations` class, implementing the most advanced linear algebra algorithms:
+
+    * `Operations.sum(a, b)`: computes the arithmetic sum of `a` and `b`.
+    * `Operations.sub(a, b)`: computes the arithmetic subtraction of `a` and `b`.
+    * `Operations.mul(a, b)`: computes the arithmetic multiplication of `a` and `b`.
+    * `Operations.div(a, b)`: computes the arithmetic division of `a` and `b`.
+
+NOTE: This project is not very useful.
+
+== Example use
+Extremely complex algorithms can be implemented with a few lines of code:
+
+.An example showcasing the power of the `Operations` class
+[source,java,options=nowrap]
+----
+package com.example.blas;
+import io.github.daniloarcidiacono.test.ci.Operations;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Operations.sum(4, 4)); // OMG
+    }
+}
+----
+
+TIP: Don't use pointless projects: please consider the environment before downloading. +
+     Save dependencies, save bandwidth.
