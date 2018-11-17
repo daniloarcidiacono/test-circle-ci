@@ -94,6 +94,19 @@
                         <version>${junit.platform.version}</version>
                     </dependency>
                 </dependencies>
+
+                <!--
+
+                    Workaround to run tests with OpenJDK 8
+
+                        Could not find or load main class org.apache.maven.surefire.booter.ForkedBooter
+
+                    https://stackoverflow.com/questions/53010200/maven-surefire-could-not-find-forkedbooter-class
+                    https://issues.apache.org/jira/browse/SUREFIRE-1588
+                -->
+                <configuration>
+                    <forkCount>0</forkCount>
+                </configuration>
             </plugin>
 
             <!-- Test coverage -->
