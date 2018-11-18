@@ -20,23 +20,31 @@ fi
 # Check the arguments
 if [[ "$#" -ne 1 ]]; then
     (>&2 echo "Invalid number of arguments, found $#, expected 1")
-
     echo "prepare-release <new-version>"
     exit 1
 fi
 
-# Pull
-echo "Pulling from dev"
-git pull origin dev --no-ff --no-commit
+# Fetch (for picking tags)
+git fetch
+existing_tag=$(git tag --list | grep $1 | wc -l)
+if [[ ${existing_tag} -gt 0 ]]; then
+    (>&2 echo "Tag $1 already exists, stop.")
+    exit 1
+fi
+
+# Merge
+echo "Merging from dev"
+git merge origin dev --no-ff --no-commit
 
 # Check if there are any conflicts
-conflicts = $(git ls-files -u | wc -l)
+conflicts=$(git ls-files -u | wc -l)
 if [[ ${conflicts} -gt 0 ]]; then
    (>&2 echo "There are merge conflicts, stop (use git merge --abort to undo changes).")
    exit 1
 fi
 
 # Update the version
+echo "Setting project version to $1"
 mvn versions:set -DnewVersion=$1
 
 # Update the changelog
