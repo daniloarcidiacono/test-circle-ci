@@ -37,7 +37,7 @@ git fetch
 git merge origin dev --ff-only
 
 # Check for no conflicts
-if [[ $? -neq 0 ]]; then
+if [[ $? -ne 0 ]]; then
     (>&2 echo "There are remote changes in dev branch that could not be merged automatically, stop.")
     exit 1
 fi
