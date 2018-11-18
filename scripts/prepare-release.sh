@@ -45,7 +45,7 @@ fi
 
 # Update the version
 echo "Setting project version to $1"
-mvn versions:set -DnewVersion=$1
+mvn versions:set -DgenerateBackupPoms=false -DnewVersion=$1
 
 # Update the changelog
 echo "Updating the CHANGELOG"
