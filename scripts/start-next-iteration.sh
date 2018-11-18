@@ -34,7 +34,7 @@ fi
 git fetch
 
 # Try to fast forward the dev branch
-git merge origin dev --ff-only
+git merge origin/dev --ff-only
 
 # Check for no conflicts
 if [[ $? -ne 0 ]]; then
