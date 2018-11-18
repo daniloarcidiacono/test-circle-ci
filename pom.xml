@@ -5,7 +5,7 @@
 
     <groupId>io.github.daniloarcidiacono.test.ci</groupId>
     <artifactId>test-circle-ci</artifactId>
-    <version>${revision}</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>CI test project</name>
     <description>CI test project</description>
@@ -220,38 +220,6 @@
                         <phase>test</phase>
                         <goals>
                             <goal>report</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <!--
-                This is needed to remove the ${revision} placeholder when executing the deploy phase
-                https://maven.apache.org/maven-ci-friendly.html
-                https://blog.soebes.de/blog/2017/04/02/maven-pom-files-without-a-version-in-it/
-            -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>flatten-maven-plugin</artifactId>
-                <version>${flatten-maven.plugin.version}</version>
-                <configuration>
-                    <!-- https://www.mojohaus.org/flatten-maven-plugin/flatten-mojo.html#flattenMode -->
-                    <flattenMode>ossrh</flattenMode>
-                    <updatePomFile>true</updatePomFile>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>flatten</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>flatten</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>flatten.clean</id>
-                        <phase>clean</phase>
-                        <goals>
-                            <goal>clean</goal>
                         </goals>
                     </execution>
                 </executions>
