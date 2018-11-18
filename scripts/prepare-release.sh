@@ -34,7 +34,7 @@ fi
 
 # Merge
 echo "Merging from dev"
-git merge origin dev --no-ff --no-commit
+git merge origin/dev --no-ff --no-commit
 
 # Check if there are any conflicts
 conflicts=$(git ls-files -u | wc -l)
@@ -45,7 +45,7 @@ fi
 
 # Update the version
 echo "Setting project version to $1"
-mvn versions:set -DnewVersion=$1
+mvn versions:set -DgenerateBackupPoms=false -DnewVersion=$1
 
 # Update the changelog
 echo "Updating the CHANGELOG"

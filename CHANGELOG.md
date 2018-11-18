@@ -1,3 +1,19 @@
+#  (2018-11-18)
+
+
+### Bug Fixes
+
+* **build:** fix JaCoCo reporting, add docs and ossrh profiles ([368e5f4](https://github.com/daniloarcidiacono/test-circle-ci/commit/368e5f4))
+* **build:** remove revision placeholder and POM flattening. ([f6cad82](https://github.com/daniloarcidiacono/test-circle-ci/commit/f6cad82))
+* add duplicate tag check in prepare-relase script ([49c5eb3](https://github.com/daniloarcidiacono/test-circle-ci/commit/49c5eb3))
+
+
+### Features
+
+* add bash scripts ([92c7c07](https://github.com/daniloarcidiacono/test-circle-ci/commit/92c7c07))
+
+
+
 #  (2018-11-17)
 
 
