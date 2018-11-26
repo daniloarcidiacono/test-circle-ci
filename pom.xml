@@ -49,6 +49,7 @@
         <maven-source.plugin.version>3.0.1</maven-source.plugin.version>
         <versions-maven.plugin.version>2.7</versions-maven.plugin.version>
         <jacoco.plugin.version>0.8.2</jacoco.plugin.version>
+        <pgpverify-maven.plugin.version>1.3.0</pgpverify-maven.plugin.version>
 
         <!-- Constraints -->
         <!-- Note we use 2 d.p so that we get can any check failure messages reported to 2 d.p. -->
@@ -179,6 +180,14 @@
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
+                                <configuration>
+                                    <!-- This is necessary for gpg to not try to use the pinentry programs -->
+                                    <!--  this solution only works on gnupg 2.1.x. 2.0.x doesn't recognize the -pinentry-mode  -->
+                                    <gpgArguments>
+                                        <arg>--pinentry-mode</arg>
+                                        <arg>loopback</arg>
+                                    </gpgArguments>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
@@ -350,6 +359,20 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
                 <version>${versions-maven.plugin.version}</version>
+            </plugin>
+
+            <!-- Signatures verification -->
+            <plugin>
+                <groupId>org.simplify4u.plugins</groupId>
+                <artifactId>pgpverify-maven-plugin</artifactId>
+                <version>${pgpverify-maven.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
