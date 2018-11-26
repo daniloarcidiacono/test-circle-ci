@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AsciiDoc is Writing Zen :: Test Circle CI docs</title>
+    <title>Test Circle CI Manual :: Test Circle CI docs</title>
     <link rel="canonical" href="https://daniloarcidiacono.github.io/test-circle-ci/main-component/1.0/index.html">
     <meta name="generator" content="Antora 1.1.1">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -59,14 +59,37 @@
 <div class="navigation-container" data-component="main-component" data-version="1.0">
   <aside class="navigation">
     <div class="panels">
-<div class="navigation-explore is-active" data-panel="explore">
+<div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Test Circle CI Manual</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Examples</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples/sum.html">Summation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examples/product.html">Product</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="navigation-explore" data-panel="explore">
   <div class="context">
-    <span class="title">Main Component</span>
+    <span class="title">Test Circle CI Manual</span>
     <span class="version">1.0</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <span class="title">Main Component</span>
+      <span class="title">Test Circle CI Manual</span>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">1.0</a>
@@ -84,19 +107,74 @@
   <a href="index.html" class="home-link is-current"></a>
 <nav class="crumbs" aria-label="breadcrumbs">
   <ul>
-    <li class="crumb"><a href="index.html">Main Component</a></li>
-    <li class="crumb"><a href="index.html">AsciiDoc is Writing Zen</a></li>
+    <li class="crumb"><a href="index.html">Test Circle CI Manual</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="file:///root/test-circle-ci-docs/main-component/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
 </div>
 <article class="doc">
-<h1>AsciiDoc is Writing Zen</h1>
+<h1>Test Circle CI Manual</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>Zen</em> in the <strong>art</strong> of writing <code>plain text</code> with
-<a href="http://aciidoc.org">AsciiDoc</a>.</p>
+<p>This is a user manual for Test Circle CI.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This project introduces the <code>Operations</code> class, that provides the most advanced linear algebra algorithms:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Operations.sum(a, b)</code>: computes the algebraic sum of <code>a</code> and <code>b</code>.</p>
+</li>
+<li>
+<p><code>Operations.sub(a, b)</code>: computes the difference of <code>a</code> and <code>b</code>.</p>
+</li>
+<li>
+<p><code>Operations.mul(a, b)</code>: computes the algebraic product of <code>a</code> and <code>b</code>.</p>
+</li>
+<li>
+<p><code>Operations.div(a, b)</code>: computes the division of <code>a</code> and <code>b</code>.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This project is not very useful.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_example_use"><a class="anchor" href="#_example_use"></a>Example use</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Extremely complex algorithms can be implemented with few lines of code:</p>
+</div>
+<div class="listingblock">
+<div class="title">An example showcasing the power of the <code>Operations</code> class</div>
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-java hljs" data-lang="java">package com.example.blas;
+import io.github.daniloarcidiacono.test.ci.Operations;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Operations.sum(4, 4)); // OMG
+    }
+}</code></pre>
+</div>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -105,47 +183,12 @@
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Use <a href="http://asciidoctor.org">Asciidoctor</a> for the best AsciiDoc
-experience.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>
-Then <span class="icon aqua"><i class="fa fa-twitter"></i></span> about it!
+Don&#8217;t use pointless projects: please consider the environment before downloading.<br>
+     Save on dependencies, save bandwidth.
 </td>
 </tr>
 </table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_sample_section"><a class="anchor" href="#_sample_section"></a>Sample Section</h2>
-<div class="sectionbody">
-<div class="ulist square">
-<ul class="square">
-<li>
-<p>item 1</p>
-</li>
-<li>
-<p>item 2</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-ruby hljs" data-lang="ruby">puts "Hello, World!"</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_another_section"><a class="anchor" href="#_another_section"></a>Another section</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This is another section!</p>
-</div>
-</div>
-</div>
-<div id="footnotes">
-<hr>
-<div class="footnote" id="_footnote_1">
-<a href="#_footnoteref_1">1</a>. Not to mention the best looking output!
 </div>
 </div>
 </article>
