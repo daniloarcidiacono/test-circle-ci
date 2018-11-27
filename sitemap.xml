@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://daniloarcidiacono.github.io/test-circle-ci/main-component/1.0/examples/product.html</loc>
-<lastmod>2018-11-27T20:24:13.417Z</lastmod>
+<loc>https://daniloarcidiacono.github.io/test-circle-ci/main-component/0.1.0-RELEASE/examples/product.html</loc>
+<lastmod>2018-11-27T20:48:51.095Z</lastmod>
 </url>
 <url>
-<loc>https://daniloarcidiacono.github.io/test-circle-ci/main-component/1.0/examples/sum.html</loc>
-<lastmod>2018-11-27T20:24:13.417Z</lastmod>
+<loc>https://daniloarcidiacono.github.io/test-circle-ci/main-component/0.1.0-RELEASE/examples/sum.html</loc>
+<lastmod>2018-11-27T20:48:51.095Z</lastmod>
 </url>
 <url>
-<loc>https://daniloarcidiacono.github.io/test-circle-ci/main-component/1.0/index.html</loc>
-<lastmod>2018-11-27T20:24:13.417Z</lastmod>
+<loc>https://daniloarcidiacono.github.io/test-circle-ci/main-component/0.1.0-RELEASE/index.html</loc>
+<lastmod>2018-11-27T20:48:51.095Z</lastmod>
 </url>
 </urlset>
